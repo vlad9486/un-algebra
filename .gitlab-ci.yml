@@ -1,0 +1,38 @@
+# We only do testing and linting stages for now.
+stages:
+  - test
+  - lint
+
+  
+# YAML "template" for a Rust CI test script.
+.cargo_test_template: &cargo_test
+  stage: test
+  script:
+    - rustc --version && cargo --version
+    - cargo test --verbose --jobs 1 --all
+
+    
+# For testing with code coverage we need a Codecov image.
+# TODO: complete code coverage generation.
+nightly:cargo:
+  image: registry.gitlab.com/starshell/docker/rust-codecov:nightly
+  <<: *cargo_test
+
+
+# Run a clippy lint report too.
+lint:clippy:
+  stage: lint
+  image: "rustdocker/rust:nightly"
+  allow_failure: true
+  script:
+    - rustc --version && cargo --version
+    - cargo +nightly install clippy
+    - cargo clippy --version
+    - cargo clippy -- -W clippy-pedantic 
+  
+
+# Cache build artifacts where we can.
+cache:
+  paths:
+    - cargo/  
+    - target/  

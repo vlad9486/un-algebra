@@ -1,0 +1,45 @@
+[package]
+name = "un_algebra"
+
+version = "0.1.0"
+
+readme = "README.md"
+
+license = "MIT"
+
+repository = "https://gitlab.com/ornamentist/un-algebra"
+
+description = """
+  Simple implementations of selected abstract algebraic\
+  structures--including groups, rings, and fields. Intended for\
+  self-study of abstract algebra concepts and not for production\
+  use."""
+
+authors = [
+  "Stuart Hungerford stuart.hungerford@gmail.com"
+]
+
+keywords = [
+  "numerics",
+  "mathematics",
+  "abstract algebra"
+]
+
+include = [
+  "CHANGELOG.md",
+  "LICENSE.txt",
+  ".gitignore",
+  "doc/**/*.md",
+  "Makefile"
+]
+
+
+[dependencies]
+num       = "^0.2.0"
+proptest  = "^0.8.3"
+float-cmp = "^0.4.0"
+
+
+[dev-dependencies]
+proptest = "^0.8.3"
+
