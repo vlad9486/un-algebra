@@ -1,13 +1,10 @@
 [package]
-name = "un_algebra"
-
-version = "0.1.0"
-
-readme = "README.md"
-
-license = "MIT"
-
+name       = "un_algebra"
+version    = "0.1.0"
+readme     = "README.md"
+license    = "MIT"
 repository = "https://gitlab.com/ornamentist/un-algebra"
+
 
 description = """
   Simple implementations of selected abstract algebraic\
@@ -15,9 +12,11 @@ description = """
   self-study of abstract algebra concepts and not for production\
   use."""
 
+
 authors = [
   "Stuart Hungerford stuart.hungerford@gmail.com"
 ]
+
 
 keywords = [
   "numerics",
@@ -25,12 +24,16 @@ keywords = [
   "abstract algebra"
 ]
 
-include = [
-  "CHANGELOG.md",
-  "LICENSE.txt",
+
+exclude = [
+  ".git",
+  "pending",
+  "Makefile",
+  ".DS_Store",
   ".gitignore",
-  "doc/**/*.md",
-  "Makefile"
+  ".projectile",
+  ".gitlab-ci.yml",
+  "proptest_regressions"
 ]
 
 
