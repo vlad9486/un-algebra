@@ -186,7 +186,7 @@ structure and its associated axioms and properties.
 ## License
 
 This project is licensed under the MIT license (see LICENSE.txt or
-[license-URL]).
+https://opensource.org/licenses/MIT).
 
 
 
