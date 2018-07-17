@@ -13,3 +13,4 @@
 #![doc(include = "../doc/references.md")]
 
 pub mod complex;
+pub mod cayley_dickson_process;
